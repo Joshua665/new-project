@@ -53,4 +53,20 @@ def imagepage3(request):
     return render (request, 'imagepage3.html')  
 
 def imagepage4(request):
-    return render (request, 'imagepage4.html')              
+    return render (request, 'imagepage4.html')   
+
+def imagepage5(request, imagename):
+    myimagename = str(imagename)
+    myimagename = myimagename.lower()
+    print(myimagename)
+    if myimagename == "django":
+        var = True
+    elif myimagename == "python":
+        var = False
+   
+    mydictionary = {
+         "var": var
+     }       
+    
+
+    return render(request, 'imagepage5.html', context=mydictionary)
