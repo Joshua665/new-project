@@ -89,6 +89,8 @@ def myform(request):
 
 def submitmyform(request):
     mydictionary = {
+        "var1" : request.POST['mytext'],
+        "var2" : request.POST['mytextarea'],
         "method" : request.method
     }
 
