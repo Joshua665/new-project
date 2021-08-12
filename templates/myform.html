@@ -5,7 +5,7 @@
 <div class="container-fluid>">
     <div class="row">
         <div class="col-md-6" style="margin: 0 auto;">
-            <form>
+            <form method="GET" action="{% url 'submitmyform' %}">
                 <div class="form-group">
                     <label for="mytext">E-mail Address</label>
                     <input type="text" id="mytext" name="mytext" class="form-control"
