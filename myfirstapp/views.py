@@ -72,3 +72,6 @@ def imagepage5(request, imagename):
     return render(request, 'imagepage5.html', context=mydictionary)
 def myform(request):
     return render(request, 'myform.html')    
+
+def submitmyform(request):
+    return render(request, 'submitmyform.html')    
