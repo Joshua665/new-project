@@ -100,9 +100,10 @@ def submitmyform(request):
 def myform2(request):
     if request.method == 'POST':
         pass    
-    if request.method == 'GET':
-        mydictionary = {
-            "form": form
-        }
+    elif request.method == 'GET':
         form = FeedbackForm()
-        return render(request, 'myform2.html', context = mydictionary)
+        mydictionary = {
+            "forms": form
+        }
+        
+        return render(request,'myform2.html',context=mydictionary)
