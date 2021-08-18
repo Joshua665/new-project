@@ -2,7 +2,8 @@
 {% block title %}My Second Form Page{% endblock %}
 {% block content %}
 <div class="col-md-6" style="margin: 0 auto;">
-<form>
+<form method="POST">
+    {% csrf_token %}
     {{forms.as_p}}
 </form>
 </div>
