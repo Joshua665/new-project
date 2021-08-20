@@ -2,6 +2,14 @@
 {% block title %}My Second Form Page{% endblock %}
 {% block content %}
 <div class="col-md-6" style="margin: 0 auto;">
+    {% if success == True %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>{{successmsg}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    {% endif %}
 <form method="POST">
     {% csrf_token %}
     {{forms.as_p}}
