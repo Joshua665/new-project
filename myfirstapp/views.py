@@ -103,10 +103,12 @@ def myform2(request):
         if form.is_valid():  
             title = request.POST['title']
             subject = request.POST['subject']
-            print(title)
-            print(subject)
-            var = str("Form Submitted " + str(request.method))
-            return HttpResponse(var)
+            mydictionary = {
+                "form" : FeedbackForm()
+            }
+            mydictionary['success'] = True
+            mydictionary['successmsg'] = "Form submitted"
+            return render(request,'myform2.html',context=mydictionary)
         else:
             mydictionary = {
                 "forms": form
