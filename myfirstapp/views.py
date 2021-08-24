@@ -2,7 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse,JsonResponse
 from .forms import *
 # Create your views here.
-
+def error_404_view(request, exception):
+    return render(request, '404.html')
 
 def myfunctioncall(request):
     return HttpResponse("Hello World")
